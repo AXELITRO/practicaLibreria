@@ -90,7 +90,7 @@ h1{
 }
 .content{
     grid-area: content;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
 .foot{
     grid-area: foot;
