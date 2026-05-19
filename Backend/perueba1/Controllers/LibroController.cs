@@ -24,7 +24,7 @@ namespace perueba1.Controllers
                 {
                     await oConn.OpenAsync();
 
-                    using (SqlCommand oCmd = new SqlCommand("SELECT Id, Titulo, AutorId From Libros", oConn))
+                    using (SqlCommand oCmd = new SqlCommand("SELECT Id, Titulo, AutorId,Imagen From Libros", oConn))
                     {
                         oCmd.CommandType = System.Data.CommandType.Text;
 
@@ -36,7 +36,8 @@ namespace perueba1.Controllers
                                 {
                                     Id = (int)reader["Id"],
                                     Titulo = reader["Titulo"].ToString(),
-                                    AutorId = (int)reader["AutorId"]
+                                    AutorId = (int)reader["AutorId"],
+                                    Imagen = reader["Imagen"] != DBNull.Value ? reader["Imagen"].ToString() : "default.jpg"
                                 });
                             }
                         }
