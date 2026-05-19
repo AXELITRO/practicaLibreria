@@ -4,6 +4,7 @@ h1{
 p{
     color: white;
 }
+
 .container{
     display: grid;
     min-height: 100vh;
@@ -36,8 +37,9 @@ p{
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.2rem;
+    font-size: 50px;
     font-weight: bold;
+    
 }
 .nav-logo i {
     font-size: 1.5rem;

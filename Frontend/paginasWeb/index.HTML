@@ -13,15 +13,15 @@
             <nav class="nav-content">
                 <div class="nav-logo">
                     <i class="fas fa-book-reader"></i>
-                    <span>Mi Biblioteca</span>
+                    <span>Mi biblioteca</span>
                 </div>
 
                 <div class="nav-search">
-                    <form action="/buscar" method="GET">
-                        <input type="text" placeholder="Buscar libros, autores, géneros..." name="q">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Buscar libros por título o autor..." name="q">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+</div>
 
                 <ul class="nav-links">
                     <li><a href="#">Inicio</a></li>
@@ -41,7 +41,7 @@
 
         <div class="foot">
             <h1>Instituto Tecnologico Superior de Poza Rica.</h1>
-            <p>ISIC</p>
+            <p>ISIC 2022-2026</p>
         </div>
     </div>
     <script src="/fetch-consumo/libros-fetch.js"></script>
