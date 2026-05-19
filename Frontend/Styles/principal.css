@@ -1,0 +1,98 @@
+h1{
+    color: rgb(221, 221, 12);
+}
+
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+    "navBar navBar navBar"
+    "content content content"
+    "content content content"
+    "content content content"
+    "foot foot foot";
+}
+.navBar {
+    grid-area: navBar;
+    background-color: #1a1a2e; /* Color oscuro elegante, cámbialo a tu gusto */
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Alineación interna de la barra */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+/* Estilos del Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav-logo i {
+    font-size: 1.5rem;
+    color: #e94560; /* Color de acento para el icono */
+}
+
+/* Estilos de la Barra de Búsqueda */
+.nav-search {
+    flex-grow: 1;
+    max-width: 700px; /* Evita que se estire demasiado en pantallas gigantes */
+}
+.nav-search form {
+    display: flex;
+    width: 100%;
+}
+.nav-search input {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+.nav-search button {
+    padding: 8px 15px;
+    background-color: #e94560;
+    border: none;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.nav-search button:hover {
+    background-color: #cc344d;
+}
+
+/* Estilos de los Enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #e94560;
+}
+.content{
+    grid-area: content;
+    background-color: blue;
+}
+.foot{
+    grid-area: foot;
+    background-color: red;
+}
