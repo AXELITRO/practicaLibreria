@@ -137,11 +137,24 @@ p{
 /* Espacio para la carátula o icono del libro */
 .book-cover {
     background-color: #f4f4f9;
-    height: 180px;
+    height: 220px; /* Le subí un poco el alto para que luzcan mejor las portadas */
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #eee;
+    overflow: hidden; /* Corta cualquier excedente */
+}
+/* Control total de la imagen */
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta y adapta la imagen perfectamente sin estirarla ni deformarla */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto visual opcional: Zoom suave al pasar el mouse por la tarjeta */
+.book-card:hover .cover-img {
+    transform: scale(1.05);
 }
 
 .book-cover i {

@@ -36,32 +36,29 @@ async function cargarBiblioteca() {
 
         // 4. Iteramos sobre los libros obtenidos de la base de datos y generamos el HTML dinámico
         libros.forEach(libro => {
-            // Buscamos el nombre del autor en nuestro mapa usando el autorId del libro
-            // Si por alguna razón no existe el ID del autor, mostrará "Autor Desconocido"
-            const nombreAutor = autoresMap[libro.autorId] || 'Autor Desconocido';
+    const nombreAutor = autoresMap[libro.autorId] || 'Autor Desconocido';
 
-            // Creamos la estructura de la tarjeta (Card)
-            const card = document.createElement('div');
-            card.classList.add('book-card');
-            card.setAttribute('data-id', libro.id);
-            card.setAttribute('data-autor-id', libro.autorId);
+    const card = document.createElement('div');
+    card.classList.add('book-card');
+    card.setAttribute('data-id', libro.id);
+    card.setAttribute('data-autor-id', libro.autorId);
 
-            card.innerHTML = `
-                <div class="book-cover">
-                    <i class="fas fa-book"></i>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">${libro.titulo}</h3>
-                    <p class="book-author"><i class="fas fa-user"></i> ${nombreAutor}</p>
-                    <button class="btn-ver" onclick="verDetalles(${libro.id})">
-                        <i class="fas fa-eye"></i> Ver Detalles
-                    </button>
-                </div>
-            `;
+    // Modificamos el innerHTML para usar la propiedad libro.imagen
+    card.innerHTML = `
+        <div class="book-cover">
+            <img src="/Images/${libro.imagen}" alt="${libro.titulo}" class="cover-img" onerror="this.src='../Images/default.jpg'">
+        </div>
+        <div class="book-info">
+            <h3 class="book-title">${libro.titulo}</h3>
+            <p class="book-author"><i class="fas fa-user"></i> ${nombreAutor}</p>
+            <button class="btn-ver" onclick="verDetalles(${libro.id})">
+                <i class="fas fa-eye"></i> Ver Detalles
+            </button>
+        </div>
+    `;
 
-            // Insertamos la tarjeta en el Grid de la página
-            booksGrid.appendChild(card);
-        });
+    booksGrid.appendChild(card);
+});
 
     } catch (error) {
         console.error('Hubo un problema al cargar los datos:', error);
