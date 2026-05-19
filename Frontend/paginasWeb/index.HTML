@@ -10,39 +10,40 @@
 <body>
     <div class="container">
         <div class="navBar">
-        <!-- Barra de navegación principal -->
-        <nav class="nav-content">
-            <!-- Izquierda: Logo/Icono de librería -->
-            <div class="nav-logo">
-                <i class="fas fa-book-reader"></i>
-                <span>Mi Biblioteca</span>
-            </div>
+            <nav class="nav-content">
+                <div class="nav-logo">
+                    <i class="fas fa-book-reader"></i>
+                    <span>Mi Biblioteca</span>
+                </div>
 
-            <!-- Centro: Barra de búsqueda -->
-            <div class="nav-search">
-                <form action="/buscar" method="GET">
-                    <input type="text" placeholder="Buscar libros, autores, géneros..." name="q">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
+                <div class="nav-search">
+                    <form action="/buscar" method="GET">
+                        <input type="text" placeholder="Buscar libros, autores, géneros..." name="q">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
 
-            <!-- Derecha: Enlaces de navegación (Opcional, pero recomendado) -->
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Mi Cuenta</a></li>
-            </ul>
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Mi Cuenta</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        </nav>
-    </div>
-
-    <div class="content">
-        <h1>Hola mundo</h1>
-    </div>
-    <div class="foot">
-        <h1>Hola mundo</h1>
-    </div>
-    </div>
+        <div class="content">
+    <h2 class="section-title">Catálogo de Libros</h2>
     
+    <div class="books-grid">
+        <p>Cargando libros desde la base de datos...</p> 
+    </div>
+</div>
+
+        <div class="foot">
+            <h1>Instituto Tecnologico Superior de Poza Rica.</h1>
+            <p>ISIC</p>
+        </div>
+    </div>
+    <script src="/fetch-consumo/libros-fetch.js"></script>
 </body>
 </html>

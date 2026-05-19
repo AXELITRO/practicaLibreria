@@ -1,7 +1,9 @@
 h1{
-    color: rgb(221, 221, 12);
+    color: white;
 }
-
+p{
+    color: white;
+}
 .container{
     display: grid;
     min-height: 100vh;
@@ -94,5 +96,98 @@ h1{
 }
 .foot{
     grid-area: foot;
-    background-color: red;
+    background-color: rgb(13, 18, 46);
+    padding-left: 30px;
+}
+
+/* Título de la sección */
+.section-title {
+    font-family: sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+/* El contenedor Grid de tarjetas */
+.books-grid {
+    display: grid;
+    /* Crea tantas columnas como quepan, con un tamaño mínimo de 220px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Diseño de cada tarjeta de libro */
+.book-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Espacio para la carátula o icono del libro */
+.book-cover {
+    background-color: #f4f4f9;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.book-cover i {
+    font-size: 4rem;
+    color: #b2bec3;
+}
+
+/* Información del libro */
+.book-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    color: #2d3436;
+    font-family: sans-serif;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0 0 15px 0;
+    font-family: sans-serif;
+}
+
+/* Botón de acción */
+.btn-ver {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-ver:hover {
+    background-color: #2980b9;
 }
